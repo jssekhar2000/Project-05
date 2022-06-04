@@ -1,0 +1,26 @@
+{
+  "name": "project-5_shopping-cart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1140.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "chalk": "^4.1.2",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.3",
+    "mongoose": "^6.3.4",
+    "multer": "^1.4.4",
+    "nodemon": "^2.0.16",
+    "valid-url": "^1.0.9"
+  }
+}
