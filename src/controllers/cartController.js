@@ -304,7 +304,7 @@ const getCart = async (req, res) => {
         if (!checkCart) {
             return res.status(404).send({ status: false, message: "Cart Not Exist With This User" })
         }
-        return res.status(200).send({ status: false, message: "User Cart Details", data: checkCart })
+        return res.status(200).send({ status: true, message: "User Cart Details", data: checkCart })
     }
     catch (error) {
         return res.status(500).send({ status: false, message: error.message })
@@ -346,7 +346,7 @@ const delCart = async (req, res) => {
 
         let deleteCart = await cartModel.findOneAndUpdate({ userId: userId }, { items: [], totalPrice: 0, totalItems: 0 }, { new: true })
 
-        return res.status(200).send({ status: false, message: "Cart Successfully Deleted", data: deleteCart })
+        return res.status(200).send({ status: true, message: "Cart Successfully Deleted", data: deleteCart })
     }
 
     catch (error) {
