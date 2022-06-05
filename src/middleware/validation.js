@@ -68,6 +68,9 @@ const isValidSize = function (value) {
 };
 
 
+//=========================Post Product Validation=====================================================
+
+
 
 const validProduct = async function (req, res, next) {
     try {

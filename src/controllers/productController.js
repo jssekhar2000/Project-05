@@ -3,6 +3,7 @@ const validator = require('../middleware/validation');
 const aws = require('../aws/aws');
 const validUrl = require('valid-url');
 
+// ==========================Create Product Api (products)============================================
 
 
 const postProducts = async function (req, res) {
@@ -34,6 +35,8 @@ const postProducts = async function (req, res) {
     }
 };
 
+
+//==============================================Get Product By Query Api (products)==================================
 
 
 const getProduct = async (req, res) => {
@@ -90,6 +93,10 @@ const getProduct = async (req, res) => {
 
 
 
+//=================================Get Products By Id Api (products/:productId)============================
+
+
+
 const getIdproducts = async (req, res) => {
 
     try {
@@ -114,6 +121,8 @@ const getIdproducts = async (req, res) => {
     }
 };
 
+
+//=====================================Update Products Api (products/:productId) =============================
 
 
 const putIdProducts = async (req, res) => {
@@ -194,6 +203,8 @@ const putIdProducts = async (req, res) => {
 };
 
 
+// ======================================Delete Product Api (products/:productId)=================================
+
 
 const deleteById = async function (req, res) {
     try {
@@ -227,3 +238,6 @@ const deleteById = async function (req, res) {
 
 
 module.exports = { postProducts, getProduct, getIdproducts, putIdProducts, deleteById };
+
+
+//====================================End=====================================================

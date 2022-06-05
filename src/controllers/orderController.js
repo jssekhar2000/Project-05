@@ -4,6 +4,8 @@ const cartModel = require("../Models/cartModel");
 const userModel = require("../Models/userModel");
 
 
+//============================== Post Order Api (users/:userId/orders)=================================
+
 
 const postOrder = async function (req, res) {
     try {
@@ -61,6 +63,9 @@ const postOrder = async function (req, res) {
         res.status(500).send({ status: false, msg: err.message });
     }
 };
+
+
+//=============================Put Order API (users/:userId/orders)==================================
 
 
 
@@ -134,3 +139,7 @@ const putOrder = async function (req, res) {
 
 
 module.exports = { postOrder, putOrder };
+
+
+
+//==========================================End===================================================

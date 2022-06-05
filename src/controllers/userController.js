@@ -6,6 +6,8 @@ const aws = require('../aws/aws')
 const validUrl = require('valid-url');
 
 
+//================================Create User Api (register)========================================
+
 
 const createUser = async function (req, res) {
     try {
@@ -154,7 +156,7 @@ const createUser = async function (req, res) {
     }
 };
 
-
+//===================================Login User Api (login)==================================================
 
 const login = async function (req, res) {
     try {
@@ -204,7 +206,7 @@ const login = async function (req, res) {
     }
 };
 
-
+//==========================Get User Api (user/:userId/profile)=======================================
 
 const getUser = async (req, res) => {
     try {
@@ -217,11 +219,6 @@ const getUser = async (req, res) => {
 
         if (!(validator.isValidObjectId(userId))) {
             return res.status(400).send({ status: false, message: "invalid userId" })
-        }
-
-
-        if (!(validator.isValidObjectId(userId))) {
-            return res.status(400).send({ status: false, message: "invalid Token" })
         }
 
         if (!(userId == tokenId)) {
@@ -242,6 +239,7 @@ const getUser = async (req, res) => {
     }
 };
 
+//=========================Update User Api (user/:userId/profile)===================================
 
 
 const update = async function (req, res) {
@@ -405,3 +403,7 @@ const update = async function (req, res) {
 
 
 module.exports = { createUser, login, getUser, update };
+
+
+
+//========================================End=================================================

@@ -5,6 +5,8 @@ const UserModel = require("../Models/userModel");
 const chalk = require("chalk");
 
 
+//==============================Create Cart Api (users/:userId/cart)=============================================== 
+
 
 const createCart = async (req, res) => {
     try {
@@ -128,6 +130,8 @@ const createCart = async (req, res) => {
     }
 };
 
+
+//===================================Update Cart Api (/users/:userId/cart)==========================
 
 
 const updateCart = async (req, res) => {
@@ -268,6 +272,8 @@ const updateCart = async (req, res) => {
 };
 
 
+//==========================================Get Cart Api (/users/:userId/cart)=======================
+
 
 const getCart = async (req, res) => {
     try {
@@ -306,6 +312,7 @@ const getCart = async (req, res) => {
 
 };
 
+//==================================Delete Cart Api (/users/:userId/cart)===============================
 
 
 const delCart = async (req, res) => {
@@ -350,3 +357,6 @@ const delCart = async (req, res) => {
 
 
 module.exports = { createCart, updateCart, getCart, delCart };
+
+
+//========================================End====================================================

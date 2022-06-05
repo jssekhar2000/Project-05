@@ -13,8 +13,8 @@ let uploadFile = async (file) => {
         let s3 = new aws.S3({ apiVersion: "2006-03-01" });
         var uploadParams = {
             ACL: "public-read",
-            Bucket: "classroom-training-bucket", // HERE
-            Key: "group14/profileImages/" + file.originalname, // HERE    
+            Bucket: "classroom-training-bucket", 
+            Key: "group14/profileImages/" + file.originalname,     
             Body: file.buffer,
         };
 
@@ -22,7 +22,7 @@ let uploadFile = async (file) => {
             if (err) {
                 return reject({ "error": err });
             }
-            return resolve(data.Location); //HERE 
+            return resolve(data.Location); 
         });
     });
 };

@@ -13,6 +13,8 @@ const authToken = (token) => {
     return tokenValidate
 }
 
+//=============================Authentication==============================================
+
 const authentication = async function (req, res, next) {
     try {
         let token1 = req.headers['authorization'];
